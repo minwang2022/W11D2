@@ -29927,8 +29927,14 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   window.receiveAllPokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_3__.receiveAllPokemon;
   window.fetchAllPokemon = _util_api_util__WEBPACK_IMPORTED_MODULE_2__.fetchAllPokemon;
+  window.store = store;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   var rootEl = document.getElementById('root');
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Pokedex"), rootEl);
+  var store = configureStore();
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Root, {
+    store: store
+  }), rootEl);
 });
 })();
 

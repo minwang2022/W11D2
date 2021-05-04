@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.receiveAllPokemon = receiveAllPokemon ;
     window.fetchAllPokemon = fetchAllPokemon;
-
+    window.store = store;
+    window.getState = store.getState; 
+    window.dispatch = store.dispatch;
 
     const rootEl = document.getElementById('root');
-    ReactDOM.render(<h1>Pokedex</h1>, rootEl);
+    const store = configureStore();
+    ReactDOM.render(<Root store={store}/>, rootEl);
   });
